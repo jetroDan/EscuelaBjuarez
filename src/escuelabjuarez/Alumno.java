@@ -40,12 +40,7 @@ public class Alumno extends javax.swing.JFrame {
         btnConsAlumno = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblAlumno = new javax.swing.JTable();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        mnuCurso = new javax.swing.JMenu();
-        mnuProfesor = new javax.swing.JMenu();
-        mnuMateria = new javax.swing.JMenu();
-        mnuAula = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
+        btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -146,6 +141,13 @@ public class Alumno extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblAlumno);
 
+        btnRegresar.setText("Regresar");
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlAlumnoLayout = new javax.swing.GroupLayout(pnlAlumno);
         pnlAlumno.setLayout(pnlAlumnoLayout);
         pnlAlumnoLayout.setHorizontalGroup(
@@ -156,7 +158,11 @@ public class Alumno extends javax.swing.JFrame {
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 21, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAlumnoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnRegresar)
+                .addGap(29, 29, 29))
         );
         pnlAlumnoLayout.setVerticalGroup(
             pnlAlumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,26 +175,9 @@ public class Alumno extends javax.swing.JFrame {
                     .addGroup(pnlAlumnoLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnRegresar))
         );
-
-        mnuCurso.setText("Curso");
-        jMenuBar1.add(mnuCurso);
-
-        mnuProfesor.setText("Profesor");
-        jMenuBar1.add(mnuProfesor);
-
-        mnuMateria.setText("Materia");
-        jMenuBar1.add(mnuMateria);
-
-        mnuAula.setText("Aula");
-
-        jMenu5.setText("Edit");
-        mnuAula.add(jMenu5);
-
-        jMenuBar1.add(mnuAula);
-
-        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -213,6 +202,13 @@ public class Alumno extends javax.swing.JFrame {
     private void txtNomAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomAlumnoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomAlumnoActionPerformed
+
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        // TODO add your handling code here:
+        Menu vuelta = new Menu();
+        vuelta.setVisible(true);
+        Alumno.this.setVisible(false);
+    }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,18 +248,13 @@ public class Alumno extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConsAlumno;
     private javax.swing.JButton btnRegAlumno;
+    private javax.swing.JButton btnRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JMenu mnuAula;
-    private javax.swing.JMenu mnuCurso;
-    private javax.swing.JMenu mnuMateria;
-    private javax.swing.JMenu mnuProfesor;
     private javax.swing.JPanel pnlAlumno;
     private javax.swing.JTable tblAlumno;
     private javax.swing.JTextField txtConsMatAlumno;

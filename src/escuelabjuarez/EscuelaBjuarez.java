@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package escuelabjuarez;
+import escuelabjuarez.*;
 
 /**
  *
@@ -15,6 +16,12 @@ public class EscuelaBjuarez {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        Menu vista = new Menu();
+        
+        
+        vista.setVisible(true);
+       
        
     }
     
